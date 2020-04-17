@@ -21,6 +21,6 @@ public class MapController {
     @GetMapping("/{month}/{day}")
     public String getMap(@PathVariable int month, @PathVariable int day, Model model) throws IOException {
         model.addAttribute("points", covidParser.getCovidData(month, day));
-        return "";
+        return "map";
     }
 }
